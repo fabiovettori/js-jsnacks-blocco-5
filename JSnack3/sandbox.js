@@ -22,13 +22,24 @@ $(document).ready(function(){
         }
     ];
 
-    // genero un numero random compreso tra 97 (lettera a) e 122 (lettera z)
-    var randomNumber = getRndInteger(97, 122);
-    console.log(randomNumber);
+    // console.log(students);
 
-    var randomLetter = String.fromCharCode(randomNumber);
-    console.log(randomLetter);
+    for (var i = 0; i < students.length; i++) {
+        var item = students[i];
 
+        // genero un numero random compreso tra 97 (lettera a) e 122 (lettera z)
+        var randomNumber = getRndInteger(97, 122);
+        // console.log(randomNumber);
+
+        var randomLetter = String.fromCharCode(randomNumber);
+        // console.log(randomLetter);
+
+        item['position'] = randomLetter;
+    }
+
+    console.log(students);
+
+    // funzione che genera un numero random da un min ad un max
     function getRndInteger(min, max) {
         return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
