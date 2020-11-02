@@ -28,17 +28,17 @@ $(document).ready(function(){
 
         weights.push(bikes[i]['weight']);
     }
-    console.log(weights);
+    // console.log(weights);
 
     // console.log(weights);
     var sortWeight = weights.sort();
-    console.log(sortWeight);
+    // console.log(sortWeight);
 
     for (var i = 0; i < bikes.length; i++) {
         var itemList = bikes[i];
 
         if (itemList['weight'] == weights[0]) {
-            console.log(itemList);
+            console.log(itemList.name);
         }
     }
 });
